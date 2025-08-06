@@ -1,0 +1,29 @@
+The Indian High Court Judgement dataset contains judgements from the Indian High Courts, downloaded from [ecourts website](https://judgments.ecourts.gov.in/). It contains judgments of 25 high courts, along with raw metadata (as .json) and structured metadata (as .parquet).
+
+- 25 high courts
+- ~16M judgments
+- ~1TB of data
+
+The data is stored in an AWS S3 bucket:
+
+`s3://indian-high-court-judgments`
+
+Data layout:
+
+- `data/pdf/year=2020/court=madras/bench=madurai/*.pdf`
+- `metadata/parquet/year=2020/court=madras/bench=madurai/metadata.parquet`
+
+Use DuckDB to answer these:
+
+1️⃣ Which high court disposed the most cases between 2019 and 2022?  
+2️⃣ What is the regression slope of the delay between `date_of_registration` and `decision_date` per year for `court='madras'`?  
+3️⃣ Plot the average delay (days) per year as a scatterplot with a regression line. Return the image as a base64 data URI (under 100,000 characters).
+
+Output should be JSON:
+
+```json
+{
+  "Most disposing court 2019-2022": "...",
+  "Regression slope": "...",
+  "Delay plot": "data:image/png;base64,..."
+}

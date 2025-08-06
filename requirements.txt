@@ -1,0 +1,8 @@
+fastapi[all]
+uvicorn
+httpx
+beautifulsoup4
+lxml
+pandas
+matplotlib
+numpy
