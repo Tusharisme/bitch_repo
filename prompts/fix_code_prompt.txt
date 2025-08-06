@@ -1,0 +1,11 @@
+The following Python code failed:
+```python
+{code}
+```
+
+It raised this error:
+```
+{error}
+```
+
+Please fix the code so it executes successfully and meets the user's requirements. Only return the fixed code inside a ```python markdown block.
