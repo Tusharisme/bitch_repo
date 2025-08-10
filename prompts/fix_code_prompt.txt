@@ -1,11 +1,102 @@
-The following Python code failed:
+The following Python code failed during execution:
+
 ```python
 {code}
 ```
 
-It raised this error:
+It produced this error:
+
 ```
 {error}
 ```
 
-Please fix the code so it executes successfully and meets the user's requirements. Only return the fixed code inside a ```python markdown block.
+**YOUR TASK:** Fix the code to execute successfully while maintaining the EXACT ORIGINAL functionality and requirements. 
+
+**CRITICAL**: You must preserve the original task logic, data sources, processing steps, and output format. Do NOT generate template code or change the core functionality.
+
+**DEBUGGING APPROACH:**
+1. **Error Analysis**: Identify the root cause of the failure
+   - Syntax errors: Fix Python syntax issues
+   - Import errors: Handle missing dependencies intelligently
+   - Runtime errors: Fix logic errors, type mismatches, or invalid operations
+   - Data errors: Handle missing data, wrong formats, or unexpected values
+   - External errors: Fix API calls, file access, or network issues
+   - Web scraping errors: Handle HTML parsing issues, missing elements, changed page structure
+
+2. **Maintain Original Intent**: 
+   - **NEVER change the core task** - keep the same data sources, URLs, processing logic
+   - **NEVER generate generic template code** - fix the specific issues in the existing code
+   - **Preserve all original functionality** - same calculations, same output format, same data processing steps
+
+3. **Smart Import & Dependency Management:**
+   - **ModuleNotFoundError**: 
+     - If it's a standard library module, fix the import statement
+     - If it's an external package, add it to the `dependencies` list at the top
+     - Never try to install packages within the code itself
+   - **Import Statement Issues**: Fix incorrect import syntax or module paths
+   - **Dependency Intelligence**: Distinguish between standard library and external packages
+
+4. **Web Scraping Specific Fixes:**
+   - **HTML Structure Changes**: Adapt selectors to find the correct table/elements
+   - **Data Parsing Issues**: Handle different text formats, missing values, or changed column structures
+   - **Encoding Problems**: Handle different character encodings or text formats
+   - **HTTP Errors**: Add proper request headers, handle timeouts, retry logic
+
+5. **Common Fix Strategies:**
+   - **FileNotFoundError**: Check file paths, add existence checks
+   - **KeyError/AttributeError**: Validate data structure before accessing
+   - **TypeError**: Fix data type conversions and validations
+   - **ConnectionError**: Add retry logic and error handling
+   - **MemoryError**: Implement streaming or chunking for large datasets
+   - **Missing Dependencies**: Add to dependencies list, don't try to install
+
+4. **Enhancement Requirements:**
+   - Add comprehensive error handling where missing
+   - Include data validation before processing  
+   - Add informative error messages and logging
+   - Handle edge cases that might cause similar failures
+   - Ensure robust execution under various conditions
+   - **PRESERVE the original task completely** - same URLs, same data processing, same outputs
+
+**DEPENDENCY FIXING GUIDELINES:**
+- **Standard Library Modules**: These should never be in the dependencies list (json, sys, os, re, urllib, datetime, pathlib, csv, sqlite3, math, statistics, etc.)
+- **External Packages**: Add missing external packages to the dependencies list (pandas, numpy, requests, matplotlib, beautifulsoup4, openpyxl, etc.)
+- **Dependency List Format**: 
+  ```python
+  dependencies = ["pandas", "requests", "beautifulsoup4"]
+  ```
+- **Import Organization**: 
+  - Standard library imports first
+  - External package imports second
+  - No installation code within the script
+
+**FIX GUIDELINES:**
+- **MAINTAIN EXACT ORIGINAL FUNCTIONALITY** - Do not change the task, data sources, URLs, or core logic
+- **Fix only the execution issues** - syntax errors, import problems, data parsing issues, etc.
+- Add necessary imports at the top if missing
+- Update `dependencies = [...]` list if new external packages are needed
+- Add try-except blocks around error-prone operations
+- Validate inputs and data before processing
+- Provide meaningful error messages in exception handling
+- Keep the same output format and final print statement
+- **DO NOT generate template/generic code** - fix the specific code provided
+- **DO NOT change URLs, data sources, or processing logic** - only fix technical issues
+
+**CRITICAL REQUIREMENTS:**
+- The fixed code must execute without errors
+- **PRESERVE the exact same task and functionality as the original code**
+- Maintain the exact same output format as intended originally
+- Add only necessary fixes - don't over-engineer or add unrelated features
+- Include proper error handling to prevent similar failures
+- Test your logic mentally for common edge cases
+- **Smart dependency management**: Only external packages in dependencies list
+- **NO TEMPLATE CODE**: Fix the actual provided code, don't generate generic examples
+
+**RESPONSE FORMAT:**
+Provide only the complete fixed Python script in a single markdown code block:
+
+```python
+# Fixed implementation here
+```
+
+No explanations or comments outside the code block. The code must be immediately executable.

@@ -1,0 +1,62 @@
+The following Python code failed during execution:
+
+```python
+{code}
+```
+
+It produced this error:
+
+```
+{error}
+```
+
+**YOUR TASK:** Fix the code to execute successfully while maintaining the original functionality and requirements.
+
+**DEBUGGING APPROACH:**
+1. **Error Analysis**: Identify the root cause of the failure
+   - Syntax errors: Fix Python syntax issues
+   - Import errors: Add missing dependencies or correct import statements
+   - Runtime errors: Fix logic errors, type mismatches, or invalid operations
+   - Data errors: Handle missing data, wrong formats, or unexpected values
+   - External errors: Fix API calls, file access, or network issues
+
+2. **Common Fix Strategies:**
+   - **ModuleNotFoundError**: Add missing packages to dependencies list
+   - **FileNotFoundError**: Check file paths, add existence checks
+   - **KeyError/AttributeError**: Validate data structure before accessing
+   - **TypeError**: Fix data type conversions and validations
+   - **ConnectionError**: Add retry logic and error handling
+   - **MemoryError**: Implement streaming or chunking for large datasets
+
+3. **Enhancement Requirements:**
+   - Add comprehensive error handling where missing
+   - Include data validation before processing
+   - Add informative error messages and logging
+   - Handle edge cases that might cause similar failures
+   - Ensure robust execution under various conditions
+
+**FIX GUIDELINES:**
+- Maintain the original code structure and logic as much as possible
+- Add necessary imports at the top if missing
+- Include `dependencies = [...]` list if new packages are needed
+- Add try-except blocks around error-prone operations
+- Validate inputs and data before processing
+- Provide meaningful error messages in exception handling
+- Keep the same output format and final print statement
+- Don't change the core functionality - only fix the execution issues
+
+**CRITICAL REQUIREMENTS:**
+- The fixed code must execute without errors
+- Maintain the exact same output format as intended originally
+- Add only necessary fixes - don't over-engineer or add unrelated features
+- Include proper error handling to prevent similar failures
+- Test your logic mentally for common edge cases
+
+**RESPONSE FORMAT:**
+Provide only the complete fixed Python script in a single markdown code block:
+
+```python
+# Fixed implementation here
+```
+
+No explanations or comments outside the code block. The code must be immediately executable.
